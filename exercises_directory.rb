@@ -33,6 +33,11 @@ def print_initial(students_hash)
   puts students_hash_initial_arr.select {|name| name.start_with?(letter)}
 end
 
+def print_max12(students_hash)
+  students_hash_initial_arr = students_hash.keys
+  puts students_hash_initial_arr.select {|name| name.length < 12}
+end
+
 def print_footer(students_hash)
   puts "Overall, we have #{students_hash.size} great students"
 end
@@ -40,5 +45,5 @@ end
 students_hash = input_students
 print_header
 print(students_hash)
-print_initial(students_hash)
+print_max12(students_hash)
 print_footer(students_hash)
